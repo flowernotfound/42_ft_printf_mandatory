@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 01:10:03 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/23 01:42:47 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/23 01:55:50 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	ft_printf(const char *format, ...)
 			i++;
 		}
 		else
-			result += ft_putchar(format[i]);
+			result += print_char(format[i]);
 		i++;
 	}
 	va_end(ap);
