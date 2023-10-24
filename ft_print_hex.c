@@ -6,23 +6,38 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 03:15:43 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/24 04:47:45 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:25:22 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
+static int	hex_digits(unsigned int number)
+{
+
+}
+
 static char	*hex_to_str(unsigned int number, int flag)
 {
+	char	hex_low[] = "0123456789abcdef";
+	char	hex_up[] = "0123456789ABCDEF";
 	char	*result;
 	int		digits;
 
-	digits = unsigned_digits(number);
+	digits = hex_digits(number);
 	result = (char *)malloc(sizeof(char) * (digits + 1));
 	if (result == NULL)
 		return (NULL);
-
-
+	result[digits] = '\0';
+	while (digits)
+	{
+		digits--;
+		if (flag)
+			result[digits] = hex_up[number % 16];
+		else
+			result[digits] = hex_low[number % 16];
+		number /= 16;
+	}
 	return (result);
 }
 
