@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 03:15:43 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/24 16:25:22 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/24 16:28:34 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,17 @@
 
 static int	hex_digits(unsigned int number)
 {
+	int	digits;
 
+	digits = 0;
+	if (number == 0)
+		return (1);
+	while (number)
+	{
+		digits++;
+		number /= 16;
+	}
+	return (digits);
 }
 
 static char	*hex_to_str(unsigned int number, int flag)
