@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 01:10:03 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/25 04:21:13 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/25 05:08:41 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,10 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (result);
 }
-
-#include <stdio.h>
-int main ()
-{
-	ft_printf("%c", 'a');
-	return 0;
-}
+//
+//#include <stdio.h>
+//int main ()
+//{
+//	ft_printf("%d", 123);
+//	return 0;
+//}
