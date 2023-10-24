@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 04:06:51 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/25 04:09:20 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/25 04:26:55 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_strlen(char *s)
 	int	length;
 
 	length = 0;
-	while (s)
+	while (s[length])
 		length++;
 	return (length);
 }
