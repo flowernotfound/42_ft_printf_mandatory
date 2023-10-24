@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 03:15:43 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/24 16:28:34 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/25 03:01:14 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,13 @@ static int	hex_digits(unsigned int number)
 
 static char	*hex_to_str(unsigned int number, int flag)
 {
-	char	hex_low[] = "0123456789abcdef";
-	char	hex_up[] = "0123456789ABCDEF";
+	char	*hex_low;
+	char	*hex_up;
 	char	*result;
 	int		digits;
 
+	hex_low = "0123456789abcdef";
+	hex_up = "0123456789ABCDEF";
 	digits = hex_digits(number);
 	result = (char *)malloc(sizeof(char) * (digits + 1));
 	if (result == NULL)

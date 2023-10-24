@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 23:43:27 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/25 02:44:48 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/25 02:59:26 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,11 @@ static int	hex_digits(unsigned long long p)
 
 static char	*p_to_hex(unsigned long long p)
 {
-	char	hex[] = "0123456789abcdef";
+	char	*hex;
 	char	*result;
 	int		digits;
 
+	hex = "0123456789abcdef";
 	digits = hex_digits(p);
 	result = (char *)malloc(sizeof(char) * (digits + 1));
 	if (result == NULL)
@@ -47,7 +48,7 @@ static char	*p_to_hex(unsigned long long p)
 	return (result);
 }
 
-int	print_ptr(unsigned long long  p)
+int	print_ptr(unsigned long long p)
 {
 	int		length;
 	int		total_length;

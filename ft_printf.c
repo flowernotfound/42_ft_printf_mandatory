@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 01:10:03 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/23 01:55:50 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/25 03:02:03 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	print_arg(va_list ap, const char c)
 
 int	ft_printf(const char *format, ...)
 {
-	va_list ap;
+	va_list	ap;
 	int		result;
 	int		i;
 
