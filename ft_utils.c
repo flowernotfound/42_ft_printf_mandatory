@@ -6,8 +6,18 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 04:06:51 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/25 04:06:53 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/25 04:09:20 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_printf.h"
 
+int	ft_strlen(char *s)
+{
+	int	length;
+
+	length = 0;
+	while (s)
+		length++;
+	return (length);
+}
