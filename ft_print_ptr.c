@@ -6,13 +6,48 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 23:43:27 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/24 23:48:47 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/25 02:44:48 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	print_ptr(unsigned long long p)
+static int	hex_digits(unsigned long long p)
+{
+	int	digits;
+
+	digits = 0;
+	if (p == 0)
+		return (1);
+	while (p)
+	{
+		digits++;
+		p /= 16;
+	}
+	return (digits);
+}
+
+static char	*p_to_hex(unsigned long long p)
+{
+	char	hex[] = "0123456789abcdef";
+	char	*result;
+	int		digits;
+
+	digits = hex_digits(p);
+	result = (char *)malloc(sizeof(char) * (digits + 1));
+	if (result == NULL)
+		return (NULL);
+	result[digits] = '\0';
+	while (digits)
+	{
+		digits--;
+		result[digits] = hex[p % 16];
+		p /= 16;
+	}
+	return (result);
+}
+
+int	print_ptr(unsigned long long  p)
 {
 	int		length;
 	int		total_length;
