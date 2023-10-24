@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 01:10:03 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/25 03:02:03 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/25 04:16:23 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	print_arg(va_list ap, const char c)
 	else if (c == 'X')
 		count += print_hex(va_arg(ap, unsigned int), 1);
 	else if (c == '%')
-		count += ft_putchar('%');
+		count += print_char('%');
 	return (count);
 }
 
@@ -58,4 +58,11 @@ int	ft_printf(const char *format, ...)
 	}
 	va_end(ap);
 	return (result);
+}
+
+#include <stdio.h>
+int main ()
+{
+	ft_printf("%d", 20);
+	return 0;
 }
