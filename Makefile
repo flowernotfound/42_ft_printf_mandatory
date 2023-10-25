@@ -6,7 +6,7 @@
 #    By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/25 05:09:10 by hmitsuyo          #+#    #+#              #
-#    Updated: 2023/10/25 06:10:06 by hmitsuyo         ###   ########.fr        #
+#    Updated: 2023/10/26 00:58:00 by hmitsuyo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,3 +24,7 @@ SRCS = ft_itoa.c \
        ft_utoa.c
 OBJ = $(SRCS:.c=.o)
 
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	ar rc
