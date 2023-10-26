@@ -6,7 +6,7 @@
 #    By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/25 05:09:10 by hmitsuyo          #+#    #+#              #
-#    Updated: 2023/10/26 00:58:00 by hmitsuyo         ###   ########.fr        #
+#    Updated: 2023/10/27 04:12:48 by hmitsuyo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,4 +27,6 @@ OBJ = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rc
+	ar rcs $(NAME) $(OBJ)
+
+
