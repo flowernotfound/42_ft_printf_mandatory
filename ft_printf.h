@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 04:02:36 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/25 04:15:49 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/27 04:27:12 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ int		print_str(char *s);
 int		print_unsigned(unsigned int number);
 char	*ft_utoa(unsigned int number);
 int		ft_strlen(char *s);
+int		ft_printf(const char *format, ...);
+int		print_arg(va_list ap, const char c);
 
 #endif
