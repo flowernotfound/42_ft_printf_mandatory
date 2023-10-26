@@ -6,7 +6,7 @@
 #    By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/25 05:09:10 by hmitsuyo          #+#    #+#              #
-#    Updated: 2023/10/27 04:12:48 by hmitsuyo         ###   ########.fr        #
+#    Updated: 2023/10/27 04:22:06 by hmitsuyo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,4 +29,15 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
+%.o: %.c
+	cc $(CFLAGS) -c $< -o $@
 
+clean:
+	rm -f $(OBJ)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re
