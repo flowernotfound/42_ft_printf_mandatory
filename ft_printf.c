@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 01:10:03 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/27 18:13:11 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/27 20:05:16 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	print_arg(va_list *ap, const char c)
 	else if (c == 'X')
 		count += print_hex(va_arg(*ap, unsigned int), 1);
 	else if (c == '%')
-		count += print_char('%');
+		count += write(1, "%", 1);
 	return (count);
 }
 
@@ -59,16 +59,3 @@ int	ft_printf(const char *format, ...)
 	va_end(ap);
 	return (result);
 }
-//
-//int main ()
-//{
-//	ft_printf("%c %c %c \n", '0', '0', '1');
-//	printf("%c %c %c \n", '0', '0', '1');
-//	ft_printf("%c %c %c \n", '1', '2', '3');
-//	printf("%c %c %c \n", '1', '2', '3');
-//	ft_printf("%c %c %c \n", '2', '1', '0');
-//	printf("%c %c %c \n", '2', '1', '0');
-//	ft_printf("%c %c %c \n", '0', '1', '2');
-//	printf("%c %c %c \n", '0', '1', '2');
-//	return 0;
-//}

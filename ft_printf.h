@@ -6,7 +6,7 @@
 /*   By: hmitsuyo <yourLogin@student.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 04:02:36 by hmitsuyo          #+#    #+#             */
-/*   Updated: 2023/10/27 18:13:48 by hmitsuyo         ###   ########.fr       */
+/*   Updated: 2023/10/27 20:05:27 by hmitsuyo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <limits.h>
-# include <stdio.h>
 
 char	*ft_itoa(int n);
 int		print_char(int c);
